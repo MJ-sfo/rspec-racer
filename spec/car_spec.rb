@@ -1,8 +1,13 @@
 require 'spec_helper'
 
 RSpec.describe Car do
+  before :each do
+    @car = Car.new
+  end  #  before :each
   describe '::new' do
-    it 'sets the initial speed of a car to 0' 
+    it 'sets the initial speed of a car to 0' do
+      @car.speed.should eql 0
+    end
   end
 
   describe '#speed' do
@@ -10,6 +15,6 @@ RSpec.describe Car do
   end
 
   describe '#accelerate' do
-    it 'increases the speed of car by a given amount' 
+    it 'increases the speed of car by a given amount'
   end
-end
+end   #  RSpec.describe
